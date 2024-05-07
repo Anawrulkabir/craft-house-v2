@@ -8,6 +8,7 @@ import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
 import toast, { Toaster } from 'react-hot-toast'
 import { AuthContext } from '../provider/AuthProvider'
 import auth from '../firebase/firbase.config'
+import axios from 'axios'
 
 const Login = () => {
   const { signinUser, signInWithGithub } = useContext(AuthContext)
@@ -38,6 +39,11 @@ const Login = () => {
     signinUser(email, password)
       .then((result) => {
         console.log(result)
+
+        const loggedUser = { email }
+        axios.post('http://localhost:3000/jwt', loggedUser).then((res) => {
+          console.log(res.data)
+        })
 
         toast.success('You have successfully logged in your account')
 

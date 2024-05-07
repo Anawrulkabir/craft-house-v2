@@ -21,42 +21,7 @@ const Home = () => {
       >
         Our Products
       </p>
-      {/* <div className="grid grid-cols-4 gap-5 mx-10  ">
-        {items.map((item) => (
-          <Link
-            to={`/details/${item._id}`}
-            key={item._id}
-            className=" hover:scale-[99%] transition duration-900 "
-          >
-            <div className="card shadow-xl  bg-[#eef9f7]">
-              <figure>
-                <img
-                  src={
-                    item.image
-                      ? item.image
-                      : 'https://w7.pngwing.com/pngs/460/672/png-transparent-page-not-found-illustration-thumbnail.png'
-                  }
-                  alt="Shoes"
-                  className=" object-cover h-80 w-96"
-                />
-              </figure>
-              <div className="card-body">
-                <div className="card-actions justify-start">
-                  <div className="badge badge-outline border-zinc-500 text-green-800 text-xs">
-                    {item.category}
-                  </div>
-                </div>
-                <h2 className="card-title text-main">{item.name}</h2>
-                <div className="flex justify-end">
-                  <p className="text-orange-400 font-light text-lg text-right">
-                    {item.price}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </Link>
-        ))}
-      </div> */}
+
       <Masonry
         className="my-masonry-grid lg:px-24 px-4 lg:space-x-12 space-x-2 "
         breakpointCols={breakpoints}
